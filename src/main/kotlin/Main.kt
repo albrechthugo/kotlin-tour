@@ -1,15 +1,9 @@
 fun main() {
-    for (number in 1..100) {
-        val isDivisibleByThree = number % 3 == 0
-        val isDivisibleByFive = number % 5 == 0
+    val words = listOf("dinosaur", "limousine", "magazine", "language")
 
-        println(
-            when {
-                isDivisibleByFive && isDivisibleByThree -> "fizzbuzz"
-                isDivisibleByFive -> "buzz"
-                isDivisibleByThree -> "fizz"
-                else -> number
-            }
-        )
+    for (word in words) {
+        if (word.startsWith("l")) {
+            println(word)
+        }
     }
 }
