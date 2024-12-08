@@ -1,13 +1,13 @@
-import kotlin.random.Random
-
 fun main() {
-    val firstResult = Random.nextInt(6)
-    val secondResult = Random.nextInt(6)
-    val isDicesEqual = firstResult == secondResult
+    val button = "A"
 
-    if (isDicesEqual) {
-        println("You win :)")
-    } else {
-        println("You lose :(")
-    }
+    println(
+        when (button) {
+            "A" -> "Yes"
+            "B" -> "No"
+            "X" -> "Menu"
+            "Y" -> "Nothing"
+            else -> "There is no such button"
+        }
+    )
 }
