@@ -1,9 +1,11 @@
-fun main() {
-    val words = listOf("dinosaur", "limousine", "magazine", "language")
+import kotlin.math.PI
 
-    for (word in words) {
-        if (word.startsWith("l")) {
-            println(word)
-        }
-    }
+fun circleArea(radius: Int): Double {
+    val area = PI * radius * radius
+
+    return area
+}
+
+fun main() {
+    println(circleArea(2))
 }
