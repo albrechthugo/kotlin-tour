@@ -1,11 +1,8 @@
-fun repeatN(n: Int, action: () -> Unit) {
-    for (i in 1..n) {
-        action()
-    }
-}
+data class Employee(val name: String, var salary: Int)
 
 fun main() {
-    repeatN(5) {
-        println("Hello")
-    }
+    val emp = Employee("Mary", 20)
+    println(emp)
+    emp.salary += 10
+    println(emp)
 }
