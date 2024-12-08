@@ -1,10 +1,11 @@
 package org.example
 
 fun main() {
-    val greenNumbers = listOf(1, 4, 23)
-    val redNumbers = listOf(17, 2)
+    val SUPPORTED = setOf("HTTP", "HTTPS", "FTP")
+    val requested = "smtp"
 
-    val totalCount = greenNumbers.count() + redNumbers.count()
+    val isSupported = requested.uppercase() in SUPPORTED
 
-    println("There are $totalCount numbers in total")
+    println("Support for $requested: $isSupported")
+
 }
