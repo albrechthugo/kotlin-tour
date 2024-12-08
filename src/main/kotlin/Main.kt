@@ -1,12 +1,25 @@
-data class City(val name: String, val state: String)
-data class Address(val street: String, val city: City)
-data class Name(val firstName: String, val lastName: String)
-data class Person(val name: Name, val address: Address, val ownsAPet: Boolean = true)
+import kotlin.random.Random
+
+data class Employee(val name: String, var salary: Int)
+
+class RandomEmployeeGenerator(var minSalary: Int, var maxSalary: Int) {
+    private val availableEmployees = listOf("Max", "Oscar", "Lando")
+
+    fun generateEmployee(): Employee {
+        val salary = Random.nextInt(minSalary, maxSalary)
+        val name = availableEmployees.random()
+
+        return Employee(name, salary)
+    }
+}
+
 
 fun main() {
-    val person = Person(
-        Name("John", "Smith"),
-        Address("123 Fake Street", City("Springfield", "US")),
-        ownsAPet = false
-    )
+    val empGen = RandomEmployeeGenerator(10, 30)
+    println(empGen.generateEmployee())
+    println(empGen.generateEmployee())
+    println(empGen.generateEmployee())
+    empGen.minSalary = 50
+    empGen.maxSalary = 100
+    println(empGen.generateEmployee())
 }
