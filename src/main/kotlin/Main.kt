@@ -1,22 +1,15 @@
-// just while
-//fun main() {
-//    var pizzaSlices = 0
-//    while ( pizzaSlices < 7 ) {
-//        pizzaSlices++
-//        println("There's only $pizzaSlices slice/s of pizza :(")
-//    }
-//    pizzaSlices++
-//    println("There are $pizzaSlices slices of pizza. Hooray! We have a whole pizza! :D")
-//}
-
-// do while
-
 fun main() {
-    var pizzaSlices = 0
-    pizzaSlices++
-    do {
-        println("There's only $pizzaSlices slice/s of pizza :(")
-        pizzaSlices++
-    } while ( pizzaSlices < 8 )
-    println("There are $pizzaSlices slices of pizza. Hooray! We have a whole pizza! :D")
+    for (number in 1..100) {
+        val isDivisibleByThree = number % 3 == 0
+        val isDivisibleByFive = number % 5 == 0
+
+        println(
+            when {
+                isDivisibleByFive && isDivisibleByThree -> "fizzbuzz"
+                isDivisibleByFive -> "buzz"
+                isDivisibleByThree -> "fizz"
+                else -> number
+            }
+        )
+    }
 }
