@@ -1,10 +1,10 @@
 package org.example
 
 fun main() {
-    val a: Int = 1000
-    val b: String = "log message"
-    val c: Double = 3.14
-    val d: Long = 100_000_000_000_000
-    val e: Boolean = false
-    val f: Char = '\n'
+    val greenNumbers = listOf(1, 4, 23)
+    val redNumbers = listOf(17, 2)
+
+    val totalCount = greenNumbers.count() + redNumbers.count()
+
+    println("There are $totalCount numbers in total")
 }
