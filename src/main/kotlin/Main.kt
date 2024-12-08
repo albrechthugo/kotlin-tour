@@ -1,11 +1,8 @@
 package org.example
 
 fun main() {
-    val name = "Kotlin"
+    val name = "Mary"
+    val age = 20
 
-    println("Hello $name")
-
-    for (i in 1..5) {
-        println("i = $i")
-    }
+    println("$name is $age years old")
 }
